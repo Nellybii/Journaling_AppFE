@@ -4,6 +4,7 @@ cffi==1.17.1
 charset-normalizer==3.3.2
 colorama==0.4.6
 cors==1.0.1
+dj-database-url==2.2.0
 Django==5.1.1
 djangorestframework==3.15.2
 djangorestframework-simplejwt==5.3.1
@@ -23,6 +24,7 @@ requests-file==2.1.0
 setuptools==75.1.0
 sqlparse==0.5.1
 tldextract==5.1.2
+typing_extensions==4.12.2
 tzdata==2024.2
 urllib3==2.2.3
 zope.event==5.0
