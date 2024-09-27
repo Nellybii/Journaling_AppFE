@@ -72,7 +72,7 @@ WSGI_APPLICATION = 'journaling_app.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL', 'postgres://postgres:movie123@localhost:5435/journal')
+        default=os.getenv('DATABASE_URL', 'postgresql://journal_t94q_user:bulXsHSpoeJsrNN9uJ0nQ6EOjZFaywQo@dpg-crrjjbt6l47c73ckcgsg-a.frankfurt-postgres.render.com/journal_t94q')
     )
 }
 
