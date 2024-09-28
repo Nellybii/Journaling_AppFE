@@ -48,7 +48,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'journaling_app.urls'
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8081',
+    'http://localhost:3000',
     'https://your-production-domain.com',
 ]
 
