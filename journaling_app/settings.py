@@ -49,7 +49,7 @@ ROOT_URLCONF = 'journaling_app.urls'
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
-    'https://your-production-domain.com',
+    'https://journals-entry-git-main-nellybiis-projects.vercel.app/',
 ]
 
 TEMPLATES = [
