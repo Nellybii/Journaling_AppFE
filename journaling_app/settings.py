@@ -71,7 +71,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'journaling_app.wsgi.application'
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL', 'postgresql://postgres:movie123@localhost:5435/journal')
+    )
 }
 
 AUTH_PASSWORD_VALIDATORS = [
