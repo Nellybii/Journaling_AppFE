@@ -49,6 +49,7 @@ ROOT_URLCONF = 'journaling_app.urls'
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
+    'https://journals-entry.vercel.app',
 ]
 
 TEMPLATES = [
@@ -68,10 +69,14 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'journaling_app.wsgi.application'
-
-DATABASES = {
+if os.getenv('DATABASE_URL'):
+    DATABASES = {
+        'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+    }
+else:
+   DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL', 'postgresql://journal_t94q_user:bulXsHSpoeJsrNN9uJ0nQ6EOjZFaywQo@dpg-crrjjbt6l47c73ckcgsg-a.frankfurt-postgres.render.com/journal_t94q')
+        default='postgresql://postgres:movie123@localhost:5435/journal'
     )
 }
 
